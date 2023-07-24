@@ -1,0 +1,44 @@
+import java.util.HashSet;
+import java.util.Scanner;
+import java.util.Set;
+
+public class UniqueDigits{
+
+   public static void main(String[] args) {
+
+      // declare variables
+      Scanner scan = null;
+      int num = 0;
+
+      // create Scanner object
+      scan = new Scanner(System.in);
+
+      // read input
+      System.out.print("Enter an Integer:: ");
+      num = scan.nextInt();
+
+      // display size of collection
+      System.out.println("Unique digits = " + 
+                   countUniqueDigits(num));
+
+      // close Scanner object
+      scan.close();
+  }
+
+  public static int countUniqueDigits(int num) {
+      Set<Integer> digits = new HashSet<Integer>();
+
+      // iterate to each digit
+      while(num > 0) {
+         // find last digit
+         // add it to collection
+         digits.add(num % 10);
+         // remove last digit
+         num /= 10;
+      }
+
+      // return size
+      return digits.size();
+  }
+
+}
