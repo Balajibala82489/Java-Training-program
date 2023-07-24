@@ -1,3 +1,5 @@
+ /* program to count the number of unique digits in a number */
+
 import java.util.HashSet;
 import java.util.Scanner;
 import java.util.Set;
