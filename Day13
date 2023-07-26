@@ -1,0 +1,22 @@
+/* Method1*/
+
+int removeElement(int A[], int elem) {
+int pointer = 0;
+for(int i=0; i<n; i++) {
+if(A[i]!=elem) {
+A[pointer++] = A[i];
+}
+}
+return pointer;
+}
+
+
+/* Method2  */
+def removeDuplicates(self, nums: List[int]) -> int:
+if len(nums) ==0 : return 0
+slow = 0
+for fast in range(1,len(nums)):
+if nums[slow] != nums[fast]:
+slow += 1
+nums[slow] = nums[fast]
+return tail+1
